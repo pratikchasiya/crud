@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container bg-body-secondary">
+        <form class="row g-3 my-5" id="form">
+            <!-- <input type="hidden" class="form-control input" id="id" value="0" name="id"> -->
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control input" id="name" name="name">
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control input" id="email" name="email">
+            </div>
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Phone No</label>
+                <input type="tel" class="form-control input" id="phone" name="phone">
+            </div>
+            <div class="col-md-6">
+                <label for="pincode" class="form-label">Pincode</label>
+                <input type="number" class="form-control input" id="pincode" name="pincode">
+            </div>
+            <div class="col-6">
+                <label class="form-check-label" for="flexRadioDefault1">Gender</label>
+                <div class="form-check col-6">
+                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1" value="male">
+                    <label class="form-check-label" for="flexRadioDefault1" name="gender">Male</label>
+                </div>
+                <div class="form-check col-6">
+                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" value="female">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Female
+                    </label>
+                </div>
+
+            </div>
+            <div class="form-check col-6">
+                <label class="form-check-label" for="flexCheckChecked">
+                    languages
+                </label>
+                <div class="form-check">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Node Js
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="node" name="language">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Angular
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="angualar" name="language">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        React
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="react" name="language">
+                </div>
+            </div>
+            <div class="col-6">
+                <input type="file" name="profile" oninput="setProfile(this)">
+                <img src="" alt="imageFile" id="outImage" width="150" height="150">
+            </div>
+            <div class="col-12 text-center">
+                <button id="save" type="button" onclick="submitFunction()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="container my-5">
+        <table class="table w-100">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Profile</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Pin code</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Language</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
